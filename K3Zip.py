@@ -15,6 +15,7 @@ console.print("""[purple]
 
 console.print("[1] Extracting a zip file")
 console.print("[2] Getting all information about a zip file")
+console.print("[3] Create a Folder .zip")
 print("\n")
 
 #enter a options
@@ -25,3 +26,5 @@ if(options == 1):
    ExtractingZipFile()
 if(options == 2):
    GettingAllInformationZipFile()
+if(options == 3):
+   CreateZipFolder()

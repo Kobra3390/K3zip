@@ -1,5 +1,6 @@
 from zipfile import ZipFile
 import datetime
+import zipfile
 
 """FUNCTION EXTRACTING ZIP FILE"""
 
@@ -45,3 +46,8 @@ def GettingAllInformationZipFile():
 
 #--------------------------------------------------------------------------
 
+def CreateZipFolder():
+   path = input("Enter the path where you want to create the .zip folder[at the end of the path there must be the name of the .zip archive]: ")
+   path.split("\\")[-1]
+   name_folder = path.strip(path)
+   FolderZip = zipfile.ZipFile(path, "w")
