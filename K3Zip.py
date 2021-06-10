@@ -14,6 +14,7 @@ console.print("""[purple]
 """)
 
 console.print("[1] Extracting a zip file")
+console.print("[2] Getting all information about a zip file")
 print("\n")
 
 #enter a options
@@ -22,4 +23,5 @@ options = int(input("Enter a Options: "))
 # analysis of the option
 if(options == 1):
    ExtractingZipFile()
-
+if(options == 2):
+   GettingAllInformationZipFile()
