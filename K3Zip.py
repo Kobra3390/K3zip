@@ -15,9 +15,9 @@ console.print("""[purple]
 """)
 
 console.print("[blue][1] Extracting File in Zip Archive")
-console.print("[blue][2] Getting all Information About a Archive Zip")
-console.print("[blue][3] Create a Archive Zip")
-console.print("[blue][4] Create a Archive Zip from a Folder")
+console.print("[blue][2] Getting all Information About an Archive Zip")
+console.print("[blue][3] Create an Archive Zip")
+console.print("[blue][4] Create an Archive Zip from a Folder")
 print("\n")
 
 try:
