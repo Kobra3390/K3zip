@@ -13,9 +13,10 @@ console.print("""[purple]
         \/       \/        \/   |__|    
 """)
 
-console.print("[1] Extracting a zip file")
-console.print("[2] Getting all information about a zip file")
-console.print("[3] Create a Folder .zip")
+console.print("[blue][1] Extracting a zip file")
+console.print("[blue][2] Getting all information about a zip file")
+console.print("[blue][3] Create a Folder .zip")
+console.print("[blue][4] Create a zip Archive from a Folder")
 print("\n")
 
 #enter a options
@@ -28,3 +29,7 @@ if(options == 2):
    GettingAllInformationZipFile()
 if(options == 3):
    CreateZipFolder()
+if(options == 4):
+   ZipFolder()
+if(options > 4):
+   console.print("")
