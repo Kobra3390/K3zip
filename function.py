@@ -11,7 +11,7 @@ def ExtractingZipFile():
    name_folder = input("Enter a name folder .zip: ")
    print("\n")
    # confirmation of the name in input
-   confirmation = input(f"A name file is {name_folder} Y / N: ")
+   confirmation = input(f"A name file is: {name_folder}, Y / N: ")
    print("\n")
    if(confirmation == 'y' or confirmation == 'Y'):
       with ZipFile(name_folder, 'r') as zip:
@@ -34,7 +34,7 @@ def GettingAllInformationZipFile():
    name_folder = input("Enter a name folder .zip: ")
    print("\n")
    # confirmation of the name in input
-   confirmation = input(f"A name file is {name_folder} Y / N: ")
+   confirmation = input(f"A name file is: {name_folder}, Y / N: ")
    print("\n")
    if(confirmation == 'y' or confirmation == 'Y'):
       with ZipFile(name_folder, 'r') as zip:
@@ -62,7 +62,7 @@ def CreateZipFolder():
 
 def ZipFolder():
    name_folder = input("Enter a name folder: ")
-   confirmation = input(f"A name folder is {name_folder} Y / N: ")
+   confirmation = input(f"A name folder is: {name_folder}, Y / N: ")
    print("\n")
    if(confirmation == 'y' or confirmation == 'Y'):
       with ZipFile('K3Zip.zip', 'w') as K3:
