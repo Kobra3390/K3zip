@@ -23,7 +23,7 @@ def ExtractingZipFile():
          zip.extractall()
          print('Done!')
    if(confirmation == 'n' or confirmation == 'N'):
-      print("sorry, you entered the file name wrong")
+      print("Sorry, you entered the file name wrong")
       
 #--------------------------------------------------------------------------
 
@@ -45,6 +45,8 @@ def GettingAllInformationZipFile():
             print('\tZIP version:\t' + str(info.create_version))
             print('\tCompressed:\t' + str(info.compress_size) + ' bytes')
             print('\tUncompressed:\t' + str(info.file_size) + ' bytes')
+   if(confirmation == 'n' or confirmation == 'N'):
+      print("Sorry, you entered the file name wrong")
 
 #--------------------------------------------------------------------------
 
@@ -72,4 +74,5 @@ def ZipFolder():
                filePath = os.path.join(folderName, filename)
                # Add file to zip
                K3.write(filePath, basename(filePath))
-
+   if(confirmation == 'n' or confirmation == 'N'):
+      print("Sorry, you entered the file name wrong")
