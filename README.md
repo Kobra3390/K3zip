@@ -9,14 +9,14 @@ K3Zip is a simple script written entirely in python, that uses the *zipfile modu
 
 ---
 # Requisiti (IT)
-__Windows__: Avere la versione più aggiornata del interprete python (minimo dalla 3.9.2 in poi), stessa cosa per quanto riguarda __Linux__. Avere inoltre anche il modulo `rich` installabile:
+__Windows__: Avere la versione più aggiornata del interprete python (minimo dalla 3.9.2 in poi), stessa cosa per quanto riguarda __Linux__. Avere inoltre anche il modulo `rich` installato:
 ```python
 $ pip install rich
 ```
 
 ---
 # Requirements (EN)
-__Windows__: Must have python interpreter 3.9.2 or newer, same thing for __Linux__. Also have the `rich` module installable:
+__Windows__: Must have python interpreter 3.9.2 or newer, same thing for __Linux__. Also have the `rich` module installated:
 ```python
 $ pip install rich
 ```
