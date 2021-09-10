@@ -23,7 +23,7 @@ $ pip install rich
 
 ---
 # Installazione (IT)
-Windows è Linux: 
+Windows e Linux: 
 ```
 $ git clone https://github.com/Kobra3390/K3zip.git
 $ cd K3Zip
