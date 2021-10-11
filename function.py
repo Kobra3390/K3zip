@@ -4,6 +4,10 @@ import zipfile
 import tarfile
 import os
 from os.path import basename
+import rich
+from rich.console import Console
+
+console = Console()
 
 #FUNCTION EXTRACTING ZIP FILE
 
@@ -139,3 +143,114 @@ def Extract_In_Folder():
    file_extract = tar_archive.extractall(name_folder)
    #chiusura dell'archivio
    tar_archive.close()
+
+#Add a folder to a Tar archive
+
+def Add_Folder_Tar_Archive():
+   name_tar_archive = str(input('Enter the name of the TAR archive: '))
+   folder_name = os.path.join(os.getcwd(), str(input("Enter the name of the folder you want to make a tar archive:  ")))
+   tar_archive = tarfile.open(f"{ name_tar_archive }.tar", 'w')
+   directory = os.scandir(folder_name)
+   for files in directory:
+      os.chdir(folder_name)
+      tar_archive.add(name=files.name, recursive=(not files.is_file()))
+   tar_archive.close()
+
+#Check the weight of a file
+
+def SizeFile():
+   #name of the input file
+   name_file = input("Enter the file name: ")
+   #calculation in bytes of the file
+   file_size = os.path.getsize(name_file)
+   #based on the amount of bytes, it prints the different multiples
+   if(file_size < 1024):
+      console.print(f"File size: [blue]{file_size} Bytes[/blue]")
+   elif(file_size > 1024 and file_size < 1048576):
+      new_file_size = file_size / 1024
+      new_file_size = round(new_file_size, 2)
+      console.print(f"File size: [blue]{new_file_size} Kilobytes[/blue]")
+   elif(file_size > 1048576 and file_size < 1073741824):
+      new_file_size = new_file_size = file_size / 1048576
+      new_file_size = round(new_file_size, 2)
+      console.print(f"File size: [blue]{new_file_size} Megabytes[/blue]")
+   else:
+      new_file_size = file_size / 1073741824
+      new_file_size = round(new_file_size, 2)
+      console.print(f"File size: [blue]{new_file_size} Gigabytes[/blue]")
+
+#Create tar archives with different types of compression
+
+def Show_Type_Compress():
+   console.print("""
+      -------------------------------------------------------------------------------------
+      TYPE OF COMPRESS:
+
+         [purple]r:[/purple]            [blue]opens an uncompressed archive in read-only mode[/blue]
+         [purple]r:gz[/purple]          [blue]opens an archive with gzip compression in read-only mode[/blue]
+         [purple]r:bz2[/purple]         [blue]opens an archive with bzip2 compression in read-only mode[/blue]
+         [purple]r:xz[/purple]          [blue]opens an archive with lzma compression in read-only mode[/blue]
+         [purple]x:gz[/purple]          [blue]create a tar archive with gzip compression[/blue]
+         [purple]x:bz2[/purple]         [blue]create a tar archive with bzip2 compression[/blue]
+         [purple]x:xz[/purple]          [blue]create a tar archive with lzma compression[/blue]
+         [purple]x:[/purple]            [blue]creates an archive without compression[/blue]
+         [purple]w:[/purple]            [blue]opens an uncompressed archive in write mode[/blue]
+         [purple]w:gz[/purple]          [blue]open archive with gzip compression in write mode[/blue]
+         [purple]w:bz2[/purple]         [blue]apre archivio con la compressione bzip2 in modalità scrittura[/blue]
+         [purple]w:xz[/purple]          [blue]open archive with lzma compression in write mode[/blue]
+        -------------------------------------------------------------------------------------
+    """)
+
+   options = input("Enter a options: ")
+
+   if(options =='r:'):
+      name_archive = input("Enter a name for tar archive [withoud extension]: ")
+      name_archive_with_extension = name_archive + '.tar' 
+      tarfile.open(name_archive_with_extension, 'r:')
+   elif(options == 'r:gz'):
+      name_archive = input("Enter a name for tar archive [withoud extension]: ")
+      name_archive_with_extension = name_archive + '.tar.gz'
+      tarfile.open(name_archive_with_extension, 'r:gz')
+   elif(options == 'r:bz2'):
+      name_archive = input("Enter a name for tar archive [withoud extension]: ")
+      name_archive_with_extension = name_archive + '.tar.bz2'
+      tarfile.open(name_archive_with_extension, 'r:bz2')
+   elif(options == 'r:xz'):
+      name_archive = input("Enter a name for tar archive [withoud extension]: ")
+      name_archive_with_extension = name_archive + '.tar.xz'
+      tarfile.open(name_archive_with_extension, 'r:xz')
+   elif(options == 'x:gz'):
+      name_archive = input("Enter a name for tar archive [withoud extension]: ")
+      name_archive_with_extension = name_archive + '.tar.gz'
+      tarfile.open(name_archive_with_extension, 'x:gz')
+   elif(options == 'x:bz2'):
+      name_archive = input("Enter a name for tar archive [withoud extension]: ")
+      name_archive_with_extension = name_archive + '.tar.bz2'
+      tarfile.open(name_archive_with_extension, 'x:bz2')
+   elif(options == 'x:xz'):
+      name_archive = input("Enter a name for tar archive [withoud extension]: ")
+      name_archive_with_extension = name_archive + '.tar.xz'
+      tarfile.open(name_archive_with_extension, 'x:xz')
+   elif(options == 'x:'):
+      name_archive = input("Enter a name for tar archive [withoud extension]: ")
+      name_archive_with_extension = name_archive + '.tar'
+      tarfile.open(name_archive_with_extension, 'x:')
+   elif(options == 'w:'):
+      name_archive = input("Enter a name for tar archive [withoud extension]: ")
+      name_archive_with_extension = name_archive + '.tar'
+      tarfile.open(name_archive_with_extension, 'w:')
+   elif(options == 'w:gz'):
+      name_archive = input("Enter a name for tar archive [withoud extension]: ")
+      name_archive_with_extension = name_archive + '.tar.gz'
+      tarfile.open(name_archive_with_extension, 'w:gz')
+   elif(options == 'w:bz2'):
+      name_archive = input("Enter a name for tar archive [withoud extension]: ")
+      name_archive_with_extension = name_archive + '.tar.bz2'
+      tarfile.open(name_archive_with_extension, 'w:bz2')
+   elif(options == 'w:xz'):
+      name_archive = input("Enter a name for tar archive [withoud extension]: ")
+      name_archive_with_extension = name_archive + '.tar.xz'
+      tarfile.open(name_archive_with_extension, 'w:xz')
+   else:
+      print("Error Input.")
+
