@@ -149,7 +149,7 @@ def Extract_In_Folder():
 def Add_Folder_Tar_Archive():
    name_tar_archive = str(input('Enter the name of the TAR archive: '))
    folder_name = os.path.join(os.getcwd(), str(input("Enter the name of the folder you want to make a tar archive:  ")))
-   tar_archive = tarfile.open(f"{ name_tar_archive }.tar", 'w')
+   tar_archive = tarfile.open(f"{name_tar_archive}.tar", 'w')
    directory = os.scandir(folder_name)
    for files in directory:
       os.chdir(folder_name)
@@ -207,50 +207,62 @@ def Show_Type_Compress():
       name_archive = input("Enter a name for tar archive [withoud extension]: ")
       name_archive_with_extension = name_archive + '.tar' 
       tarfile.open(name_archive_with_extension, 'r:')
+      name_archive_with_extension.close()
    elif(options == 'r:gz'):
       name_archive = input("Enter a name for tar archive [withoud extension]: ")
       name_archive_with_extension = name_archive + '.tar.gz'
       tarfile.open(name_archive_with_extension, 'r:gz')
+      name_archive_with_extension.close()
    elif(options == 'r:bz2'):
       name_archive = input("Enter a name for tar archive [withoud extension]: ")
       name_archive_with_extension = name_archive + '.tar.bz2'
       tarfile.open(name_archive_with_extension, 'r:bz2')
+      name_archive_with_extension.close()
    elif(options == 'r:xz'):
       name_archive = input("Enter a name for tar archive [withoud extension]: ")
       name_archive_with_extension = name_archive + '.tar.xz'
       tarfile.open(name_archive_with_extension, 'r:xz')
+      name_archive_with_extension.close()
    elif(options == 'x:gz'):
       name_archive = input("Enter a name for tar archive [withoud extension]: ")
       name_archive_with_extension = name_archive + '.tar.gz'
       tarfile.open(name_archive_with_extension, 'x:gz')
+      name_archive_with_extension.close()
    elif(options == 'x:bz2'):
       name_archive = input("Enter a name for tar archive [withoud extension]: ")
       name_archive_with_extension = name_archive + '.tar.bz2'
       tarfile.open(name_archive_with_extension, 'x:bz2')
+      name_archive_with_extension.close()
    elif(options == 'x:xz'):
       name_archive = input("Enter a name for tar archive [withoud extension]: ")
       name_archive_with_extension = name_archive + '.tar.xz'
       tarfile.open(name_archive_with_extension, 'x:xz')
+      name_archive_with_extension.close()
    elif(options == 'x:'):
       name_archive = input("Enter a name for tar archive [withoud extension]: ")
       name_archive_with_extension = name_archive + '.tar'
       tarfile.open(name_archive_with_extension, 'x:')
+      name_archive_with_extension.close()
    elif(options == 'w:'):
       name_archive = input("Enter a name for tar archive [withoud extension]: ")
       name_archive_with_extension = name_archive + '.tar'
       tarfile.open(name_archive_with_extension, 'w:')
+      name_archive_with_extension.close()
    elif(options == 'w:gz'):
       name_archive = input("Enter a name for tar archive [withoud extension]: ")
       name_archive_with_extension = name_archive + '.tar.gz'
       tarfile.open(name_archive_with_extension, 'w:gz')
+      name_archive_with_extension.close()
    elif(options == 'w:bz2'):
       name_archive = input("Enter a name for tar archive [withoud extension]: ")
       name_archive_with_extension = name_archive + '.tar.bz2'
       tarfile.open(name_archive_with_extension, 'w:bz2')
+      name_archive_with_extension.close()
    elif(options == 'w:xz'):
       name_archive = input("Enter a name for tar archive [withoud extension]: ")
       name_archive_with_extension = name_archive + '.tar.xz'
       tarfile.open(name_archive_with_extension, 'w:xz')
+      name_archive_with_extension.close()
    else:
       print("Error Input.")
 
