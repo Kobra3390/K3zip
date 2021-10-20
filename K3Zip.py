@@ -25,7 +25,6 @@ console.print("[blue][7]   Check the contents of a Tar archive")
 console.print("[blue][8]   Extract files in a folder from a Tar archive")
 console.print("[blue][9]   Add a folder to a Tar archive")
 console.print("[blue][10]  Check the weight of a file")
-console.print("[blue][11]  Create Tar archives with different types of compression")
 console.print("[blue]--------------------------------------------------")
 print("\n")
 
@@ -55,9 +54,7 @@ try:
       Add_Folder_Tar_Archive()
    if(options == 10):
       SizeFile()
-   if(options == 11):
-      Show_Type_Compress()
-   if(options > 11):
+   if(options > 10):
       console.print("[purple]Invalid Option, exeting...")
 except KeyboardInterrupt:
    console.print("\n\n[purple]EXITING....")
