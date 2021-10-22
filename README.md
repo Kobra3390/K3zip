@@ -67,3 +67,17 @@ K3Zip has four possible operations:
 1. __Creation of a zip archive__: This operation creates a zip archive, by specifing the path where it should be created The name of the archive goes at the end of the path specification
 
 1. __Convertion of a folder in a zip archive__: This operation allows the user to turn a folder in a zip archive. The folder must be in the same folder as the script
+
+---
+# K3Zip Versione 2 "K3Zipv2" (IT)
+
+Nella versione 2 di K3Zip sono state aggiunge diverse funzionalitá inerenti agli Archivi Tar, ben 6 funzioni che si vanno aggiungere alle giá 4 presenti, esse sono:
+
+5. __Crea un archivio Tar__: Con tale funzione andiamo a creare un Archivio Tar dando in input il nome dell'archivio
+6. __Aggiungi file all'Archivio Tar__: Con questa funzione andiamo ad aggiungere file ad un Archivio Tar creato in precedenza, i file dovranno trovarsi nella stessa directory del programma, o dovrá essere inserito per esteso il loro percorso di sistema
+7. __Controllare il contenuto di un archivio Tar__: Con questa formula si va a controllare il contenuto di un Archvio Tar, in output ci restituirá nome di file e cartelle presenti nell'archivio.
+8. __Estrai i file in una cartella da un archivio Tar__: Questa operazione va a estrarre in una cartella di output tutto il contenuto di un archivio Tar
+9. __Aggiungi una cartella a un archivio Tar__: Con questa funzione andiamo ad aggiungere una cartella (contenente file ed eventuali altre sottocartelle) ad un Archivio Tar
+10. __Controlla il peso di un file__: Con questa funzionalitá é possibile sapere il peso di un certo file con annessi i suoi multipli e sottomultipli (KiloBytes, MegaBytes, GigaBytes etc)
+
+
