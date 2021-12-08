@@ -69,7 +69,7 @@ K3Zip has four possible operations:
 1. __Convertion of a folder in a zip archive__: This operation allows the user to turn a folder in a zip archive. The folder must be in the same folder as the script
 
 ---
-# K3Zip Versione 2 "K3Zipv2" (IT)
+# K3Zip Versione 2 "K3Zip V2" (IT)
 
 Nella versione 2 di K3Zip sono state aggiunge diverse funzionalitá inerenti agli Archivi Tar, ben 6 funzioni che si vanno aggiungere alle giá 4 presenti, esse sono:
 
@@ -80,4 +80,19 @@ Nella versione 2 di K3Zip sono state aggiunge diverse funzionalitá inerenti agl
 9. __Aggiungi una cartella a un archivio Tar__: Con questa funzione andiamo ad aggiungere una cartella (contenente file ed eventuali altre sottocartelle) ad un Archivio Tar
 10. __Controlla il peso di un file__: Con questa funzionalitá é possibile sapere il peso di un certo file con annessi i suoi multipli e sottomultipli (KiloBytes, MegaBytes, GigaBytes etc)
 
+---
+# K3zip Version 2 "K3Zip V2" 
 
+In K3Zip version 2 some functionalities inherent to Tar Archives have been added, 6 of them to be exact:
+
+5. __Create a Tar Archive__: With this funciton the user can create a Tar Archive, by giving the archive's name in input.
+
+6. __Add a file to a Tar Archive__: With this funciton we can add a file to the previously created archive; the file must be in the same directory as the program, otherwise the full file path needs to be entered.
+
+7. __Check the content of a Tar Archive__: with this funciton we can check the names of files and folders contained in the archive.
+
+8. __Extract files from a Tar Archive__: with this operation, all the files in the archive get extracted in an output folder.
+
+9. __Add a folder in a Tar Archive__: this funciton adds a folder(and subfolders and files contained in it, if present) to a Tar Archive.
+
+10. __Check a file's size__: with this functionality it's possible to know a file's size, in Kilobytes, Megabytes, Gigabytes and their multiples/submultiples.
